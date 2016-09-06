@@ -29,5 +29,7 @@ Other variables to play around with
 <br>
 <br>
 Money is dollarstotal
+<br>
 Viewers is currentviewers (only change 10 seconds after starting stream to give time to startup/followers to join)
+<br>
 Subscribers is subscribers
