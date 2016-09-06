@@ -1,6 +1,6 @@
 ![alt text](http://i.imgur.com/QnsjhP1.png "Streamer logo")
 
-[Link to the game @ streamer.pnrxa.com](http://www.streamer.pnrxa.com)
+[Link to the game @ streamer.pnrxa.com](http://streamer.pnrxa.com)
 <br>
 # WARNING: Streamer is an ubalanced prototype. Game is functional but the code is hacked together and kinda sucks 
 <br>
