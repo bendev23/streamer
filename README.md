@@ -21,9 +21,12 @@ Current Features
 * Game saves every "month" (minute) or manual save
 * Incomplete basic mobile design
 <br>
+<br>
 If you'd like a boost to see features, use console and set followers = 100000 or higher and that many viewers will join within 10 seconds of starting the stream
 <br>
+<br>
 Other variables to play around with
+<br>
 <br>
 Money is dollarstotal
 Viewers is currentviewers (only change 10 seconds after starting stream to give time to startup/followers to join)
