@@ -6,8 +6,6 @@
 <br>
 ## Streamer is a clicker game by /u/pnrxa based on [Twitch.tv](https://www.twitch.tv)
 <br>
-[Link to the game @ streamer.pnrxa.com](https://www.streamer.pnrxa.com)
-<br>
 Current Features 
 <br>
 * Gain viewers, followers and subscribers (which give $2.5 per month)
