@@ -1,0 +1,253 @@
+body {
+    margin: 0px;
+    font-family: sans-serif;
+    background: #EFEEF1;
+}
+
+input[type='radio']:disabled {
+    cursor: default;
+}
+
+input[type='checkbox']:disabled {
+    cursor: default;
+}
+
+#onlinechecker {
+    color: red;
+    font-size: 100px;
+}
+
+#giphy {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-width: 100%;
+    max-height: 100%;
+    z-index: -1;
+}
+
+#topDonorTitle {
+    
+    font-size: 30px;
+    
+}
+
+#giphyPlaceholder {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-width: 100%;
+    max-height: 100%;
+    z-index: -2;
+}
+
+#donateText {
+    color: white;
+    font-size: 50px;
+}
+
+#topDonorsText {
+    color: white;
+    font-size: 20px;
+    bottom: 0;
+    position: absolute;
+}
+
+.hide-text {
+    visibility: hidden;
+}
+
+#ddosOffline {
+    color: red;
+}
+
+#subMoneyMonth {
+    color: green;
+}
+
+#giveFollowerGain {
+    color: green;
+}
+
+#giveSubscriberGain {
+    color: green;
+}
+
+.btn-twitch {
+    color: #ffffff;
+    background-color: #6441A4;
+}
+
+.btn-twitch:hover,
+.btn-twitch:focus,
+.btn-twitch:active,
+.btn-twitch.active,
+.open .dropdown-toggle.btn-twitch {
+    color: #ffffff;
+    background-color: #7D5BBE;
+}
+
+.btn-twitch:active,
+.btn-twitch.active,
+.open .dropdown-toggle.btn-twitch {
+    background-image: none;
+}
+
+.btn-twitch.disabled,
+.btn-twitch[disabled],
+fieldset[disabled] .btn-twitch,
+.btn-twitch.disabled:hover,
+.btn-twitch[disabled]:hover,
+fieldset[disabled] .btn-twitch:hover,
+.btn-twitch.disabled:focus,
+.btn-twitch[disabled]:focus,
+fieldset[disabled] .btn-twitch:focus,
+.btn-twitch.disabled:active,
+.btn-twitch[disabled]:active,
+fieldset[disabled] .btn-twitch:active,
+.btn-twitch.disabled.active,
+.btn-twitch[disabled].active,
+fieldset[disabled] .btn-twitch.active {
+    background-color: #6441A4;
+}
+
+.btn-twitch .badge {
+    color: #6441A4;
+    background-color: #ffffff;
+}
+
+.btn-twitch .badge {
+    color: #6441A4;
+    background-color: #ffffff;
+}
+
+.scrollable-menu {
+    height: auto;
+    max-height: 200px;
+    overflow-x: hidden;
+}
+
+.advertwidth {
+    width: 89px;
+}
+
+#logo {
+    width: 100%;
+    height: auto;
+}
+
+#logotext {
+    font-size: 10px;
+    text-align: center;
+}
+
+#fps {
+    color: white;
+    position: absolute;
+    right: 0;
+}
+
+#fakevideo {
+    height: 650px;
+    width: 100%;
+    border: 3px solid black;
+    background: #1a1a1a;
+    z-index: -2;
+}
+
+#onlinechecker {
+    margin-right: 100px;
+    color: red;
+    position: absolute;
+    right: 0;
+}
+
+.fill {
+    min-height: 100%;
+    height: 100%;
+}
+
+#chatWrapper {
+    width: 340px;
+    height: 750px;
+    background-color: #efeef1;
+    font-family: arial, sans-serif;
+    font-size: 12px;
+    position: relative;
+    padding-top: 0px;
+    overflow: hidden;
+    margin: 0px auto;
+    right: 0px;
+}
+
+#chatHeader {
+    margin: 0;
+    box-sizing: border-box;
+    position: relative;
+    height: 50px;
+    padding: 10px 0;
+    line-height: 30px;
+    text-align: center;
+    font-size: 14px;
+    width: 100%;
+    box-shadow: inset 0 -1px 0 0 #dad8de;
+    background-color: #efeef1;
+    z-index: 999;
+}
+
+#chatHeader p {
+    margin: 0;
+    box-sizing: border-box;
+    line-height: 20px;
+    font-size: 12px;
+    margin-bottom: -6px;
+    padding-top: 6px;
+    font-family: "Helvetica Neue", "Helvetica", sans-serif
+}
+
+svg.headerIcon {
+    fill: rgb(100, 65, 164);
+    position: absolute;
+    left: 20px;
+    top: 17.5px;
+    line-height: 30px;
+}
+
+#chat {
+    width: 320px;
+    height: 27px;
+    padding: 10px;
+    /*background-color:white;*/
+    overflow: hidden;
+    position: absolute;
+}
+
+#chat p {
+    line-height: 21px;
+}
+
+#chat p img {
+    display: inline-block;
+    vertical-align: middle;
+    margin: -5px 0px;
+}
+
+#welcome {
+    color: #666;
+    margin-top: 0px;
+}
+
+a {
+    color: #6441a5;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

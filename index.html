@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/css/bootstrap.min.css" integrity="sha384-MIwDKRSSImVFAZCVLtU0LMDdON6KVCrZHyVQQj6e8wIEJkW4tvwqXrbMIya1vriY" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- font awesome -->
+    <script src="https://use.fontawesome.com/84b2d3e343.js"></script>
+    <!-- animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css">
+    <title>Streamer</title>
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-2 col-sm-4">
+
+                <div class="panel panel-info">
+
+                    <img id="logo" src="img/logo.png">
+                    <p id="logotext">A clicker game by <a href="http://reddit.com/u/pnrxa">/u/PNRxA</a> based on <a href="http://twitch.tv">Twitch</a>
+                    </p>
+                    <hr class="hidden-sm-up">
+                    <div class="panel-heading hidden-sm-up">Expand/Contract Info <span data-toggle="collapse" data-target="#collapse" class="badge pull-right">Click me-&#62;<img src="https://static-cdn.jtvnw.net/emoticons/v1/25/1.0" alt="Kappa" /></span></div>
+                    <div class="collapse navbar-collapse in" id="collapse">
+                        <hr>
+                        <span id="currentmonth">Month: January </span>
+                        <p>(+$<span id="subMoneyMonth">0.00</span> per month from subscribers)</p>
+                        <hr>
+                        <p id="dollarstotal">$0.00</p>
+                        <p id="dollarspersecond">$0.00/s</p>
+                        <hr>
+                        <p>CURRENT SPECS</p>
+                        <hr>
+                        <p>GPU</p>
+                        <p id="currentgpu">.</p>
+                        <div class="text-xs-center" id="gpupowerpercent">GPU Potential Power&hellip; 0%</div>
+                        <progress class="progress progress-striped progress-animated" value="0" max="100" id="gpupower"></progress>
+                        <hr>
+                        <p>CPU</p>
+                        <p id="currentcpu">.</p>
+                        <div class="text-xs-center" id="cpupowerpercent">CPU Potential Power&hellip; 0%</div>
+                        <progress class="progress progress-striped progress-animated" value="0" max="100" id="cpupower"></progress>
+                        <hr>
+                        <button id="shopButton" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Shop</button>
+                        <div id="myModal" class="modal fade" role="dialog">
+                            <div class="modal-dialog">
+
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">Welcome to the shop!</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <ul class="nav nav-tabs" role="tablist">
+                                            <li class="nav-item">
+                                                <a class="nav-link active" data-toggle="tab" href="#components" role="tab">Components</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" data-toggle="tab" href="#upgrades" role="tab">DDoS</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" data-toggle="tab" href="#giveaways" role="tab">Giveaways</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" data-toggle="tab" href="#settings" role="tab">Settings</a>
+                                            </li>
+                                        </ul>
+
+                                        <div class="tab-content">
+                                            <div class="tab-pane active" id="components" role="tabpanel">
+                                                <hr>
+                                                <p>Components increase viewers per second.</p>
+                                                <p>Viewers/s is influenced by current viewers plus this bonus.</p>
+                                                <p>Current viewers/s <strong>bonus</strong>: (<span id="vsbonus">0</span>)</p>
+                                                <hr>
+                                                <br>
+                                                <p>Upgrade GPU to <span id="gpuname">Upgrade GPU to</span></p>
+
+                                                <button id="buygpu" type="button" class="btn btn-primary">Buy</button>
+                                                <br>
+                                                <br>
+                                                <div class="alert alert-danger" role="alert">
+                                                    <strong>WARNING: </strong>STREAM WILL GO OFFLINE TO INSTALL.
+                                                </div>
+                                                <hr>
+                                                <p>Upgrade CPU to <span id="cpuname">Upgrade CPU to</span></p>
+                                                <button id="buycpu" type="button" class="btn btn-primary">Buy</button>
+                                                <br>
+                                                <br>
+                                                <div class="alert alert-danger" role="alert">
+                                                    <strong>WARNING: </strong>STREAM WILL GO OFFLINE TO INSTALL.
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane" id="upgrades" role="tabpanel">
+                                                <hr>
+                                                <p>DDoS popular stream to instantly gain viewers.</p>
+                                                <hr>
+                                                <p>Browse streamers by using the arrows below.</p>
+                                                <div class="row">
+                                                    <button id="lesserupgrade" type="button" class="btn btn-default btn-lg col-xs-1">&lt;&lt;</button>
+                                                    <button id="lessupgrade" type="button" class="btn btn-default btn-lg col-xs-1">&lt;</button>
+                                                    <button id="buyupgrade" type="button" class="btn btn-primary btn-lg col-xs-4">Buy</button>
+                                                    <button id="moreupgrade" type="button" class="btn btn-default btn-lg col-xs-1">&gt;</button>
+                                                    <button id="morerupgrade" type="button" class="btn btn-default btn-lg col-xs-1">&gt;&gt;</button>
+                                                </div>
+                                                <br>
+                                                <p>DDoS <a id="twitchid" href="https://www.twitch.tv"><span id="upgradename">upgrade name</span></a> for <span id="upgradeworth">1</span> viewers.<span id="ddosOffline"></span></p>
+
+                                                <div class="alert alert-info" role="alert">
+                                                    <strong>Hint: </strong>Stream <i>won't</i> go offline with upgrades.
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane" id="giveaways" role="tabpanel">
+
+
+                                                <hr>
+                                                <p><strong>You need over 100 viewers to host a giveaway.</strong></p>
+                                                <p>Give away an old component to make:</p>
+                                                <p>1/10 of your current viewers follow you (<span id="giveFollowerGain">0</span>)</p>
+                                                <p>1/100 of your current viewers subscribe (<span id="giveSubscriberGain">0</span>)</p>
+                                                <hr>
+                                                <p>Browse CPU's and GPU's by using the arrows below.</p>
+                                                <hr>
+                                                <p>GPU's</p>
+                                                <span id="gpugivename">GPU</span>
+                                                <div class="row">
+                                                    <button id="lessgpugive" type="button" class="btn btn-default btn-lg col-sm-4">&lt;</button>
+                                                    <button id="gpugive" type="button" class="btn btn-primary btn-lg col-sm-4">Give Away</button>
+                                                    <button id="moregpugive" type="button" class="btn btn-default btn-lg col-sm-4">&gt;</button>
+                                                </div>
+                                                <hr>
+                                                <p>CPU's</p>
+                                                <span id="cpugivename">CPU</span>
+                                                <div class="row">
+                                                    <button id="lesscpugive" type="button" class="btn btn-default btn-lg col-sm-4">&lt;</button>
+                                                    <button id="cpugive" type="button" class="btn btn-primary btn-lg col-sm-4">Give Away</button>
+                                                    <button id="morecpugive" type="button" class="btn btn-default btn-lg col-sm-4">&gt;</button>
+                                                </div>
+                                                <hr>
+                                                <div class="alert alert-info" role="alert">
+                                                    <strong>Hint: </strong>Stream <i>won't</i> go offline for giveaways.
+                                                </div>
+
+
+                                            </div>
+                                            <div class="tab-pane" id="settings" role="tabpanel">...</div>
+                                        </div>
+
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="hidden-sm-up">
+                </div>
+
+
+
+
+            </div>
+
+            <div class="col-xl-10 col-sm-8">
+                <div class="row">
+                    <div class="col-xl-9">
+                        <div class="row">
+                            <div class="col-xl-12 hidden-sm-down">
+                                <br>
+                                <form class="form-inline" id="streamnameform">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="streamname" placeholder="Enter Username">
+                                    </div>
+                                    is playing
+                                    <div class="form-group">
+                                        <div class="dropdown">
+                                            <button class="btn btn-twitch dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example
+                                                <span class="caret"></span></button>
+                                            <ul class="dropdown-menu scrollable-menu">
+                                                <li><a href="#">HTML</a></li>
+                                                <li><a href="#">CSS</a></li>
+                                                <li><a href="#">JavaScript</a></li>
+                                                <li><a href="#">HTML</a></li>
+                                                <li><a href="#">CSS</a></li>
+                                                <li><a href="#">JavaScript</a></li>
+                                                <li><a href="#">HTML</a></li>
+                                                <li><a href="#">CSS</a></li>
+                                                <li><a href="#">JavaScript</a></li>
+                                                <li><a href="#">HTML</a></li>
+                                                <li><a href="#">CSS</a></li>
+                                                <li><a href="#">JavaScript</a></li>
+                                                <li><a href="#">HTML</a></li>
+                                                <li><a href="#">CSS</a></li>
+                                                <li><a href="#">JavaScript</a></li>
+                                                <li><a href="#">HTML</a></li>
+                                                <li><a href="#">CSS</a></li>
+                                                <li><a href="#">JavaScript</a></li>
+                                                <li><a href="#">HTML</a></li>
+                                                <li><a href="#">CSS</a></li>
+                                                <li><a href="#">JavaScript</a></li>
+                                                <li><a href="#">HTML</a></li>
+                                                <li><a href="#">CSS</a></li>
+                                                <li><a href="#">JavaScript</a></li>
+                                                <li><a href="#">HTML</a></li>
+                                                <li><a href="#">CSS</a></li>
+                                                <li><a href="#">JavaScript</a></li>
+                                                <li><a href="#">HTML</a></li>
+                                                <li><a href="#">CSS</a></li>
+                                                <li><a href="#">JavaScript</a></li>
+                                                <li><a href="#">HTML</a></li>
+                                                <li><a href="#">CSS</a></li>
+                                                <li><a href="#">JavaScript</a></li>
+                                                <li><a href="#">HTML</a></li>
+                                                <li><a href="#">CSS</a></li>
+                                                <li><a href="#">JavaScript</a></li>
+                                                <li><a href="#">HTML</a></li>
+                                                <li><a href="#">CSS</a></li>
+                                                <li><a href="#">JavaScript</a></li>
+                                                <li><a href="#">HTML</a></li>
+                                                <li><a href="#">CSS</a></li>
+                                                <li><a href="#">JavaScript</a></li>
+                                                <li><a href="#">HTML</a></li>
+                                                <li><a href="#">CSS</a></li>
+                                                <li><a href="#">JavaScript</a></li>
+                                                <li><a href="#">HTML</a></li>
+                                                <li><a href="#">CSS</a></li>
+                                                <li><a href="#">JavaScript</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </form>
+                                <br>
+                            </div>
+                        </div>
+                        <div class="row  hidden-sm-down">
+                            <div id="fakevideo" class="col-xl-12">
+                                <p id="onlinechecker"></p>
+                                <p id="fps">0 FPS</p>
+                                <h1 class="tlt hide-text" id="donateText"><span id="donateAmount">$0.00</span></h1>
+                                <p id="topDonorsText"><span id="topDonorTitle">Top 10 Donators this stream</span>
+                                    <br> <span id="0">N/A</span>
+                                    <br> <span id="1">N/A</span>
+                                    <br> <span id="2">N/A</span>
+                                    <br> <span id="3">N/A</span>
+                                    <br> <span id="4">N/A</span>
+                                    <br> <span id="5">N/A</span>
+                                    <br> <span id="6">N/A</span>
+                                    <br> <span id="7">N/A</span>
+                                    <br> <span id="8">N/A</span>
+                                    <br> <span id="9">N/A</span></p>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-xl-4">
+                                <button id="startbroadcast" type="button" class="btn button btn-twitch btn-sm">Start Stream</button>
+                                <button id="runadvert" type="button" class="btn button btn-twitch btn-sm advertwidth" data-toggle="popover" data-trigger="hover" data-placement="top" title="Run Advert" data-content="Gain $0.002 per impression. Can be used every 30 seconds.">Run Advert</button>
+                                <button id="save" type="button" class="btn button btn-twitch btn-sm" data-toggle="popover" data-trigger="hover" data-placement="top" title="Manual Save" data-content="Manually save the game. Game is automatically saved every in-game month (1 minute)">Save Game</button>
+                                <button id="reset" type="button" class="btn btn-danger">Reset</button>
+                            </div>
+
+                            <div class="col-xl-8">
+                                <div class="row">
+                                    <div class="col-sm-3">
+
+                                        <i class="fa fa-users" aria-hidden="true" data-toggle="popover" data-trigger="hover" data-placement="top" title="Viewers Per Second" data-content="Based on current viewers plus component bonus."></i><span id="viewerspersecond">0/s</span>
+
+                                    </div>
+                                    <div class="col-sm-3">
+
+                                        <i class="fa fa-user" aria-hidden="true" data-toggle="popover" data-trigger="hover" data-placement="top" title="Current Viewers" data-content="How many people are currently watching your stream."></i><span id="currentviewers">0</span>
+
+                                    </div>
+                                    <div class="col-sm-3">
+
+                                        <i class="fa fa-heart" aria-hidden="true" data-toggle="popover" data-trigger="hover" data-placement="top" title="Followers" data-content="People who have followed your stream."></i><span id="followers">0</span>
+
+                                    </div>
+                                    <div class="col-sm-3">
+
+                                        <i class="fa fa-usd" aria-hidden="true" data-toggle="popover" data-trigger="hover" data-placement="top" title="Subscribers" data-content="People who have subscribed to your stream (+$2.50 per subscriber per month)"></i><span id="subscribers">0</span>
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+                    <div class="hidden-lg-down col-xl-3">
+                        <div id="chatWrapper">
+
+                            <div id="chatHeader">
+
+                                <svg class="headerIcon" height="16px" version="1.1" viewbox="0 0 16 16" width="16px" x="0px" y="0px">
+                                    <path clip-rule="evenodd" d="M1,13v-2h14v2H1z M1,5h13v2H1V5z M1,2h10v2H1V2z M12,10H1V8h11V10z" fill-rule="evenodd"></path>
+                                </svg>
+
+                                <p>Chat modified from <a href="http://www.twitchchat.com">twitchchat.com</a></p>
+
+                            </div>
+
+                            <div id="chat">
+
+                                <p id="welcome">Welcome to your chat room!</p>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/js/bootstrap.min.js" integrity="sha384-ux8v3A6CPtOTqOzMKiuo3d/DomGaaClxFYdCu2HPMBEkf6x2xiDyJ7gkXU0MWwaD" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <!-- lettering.js -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.7.0/jquery.lettering.js"></script>
+    <!-- textillate -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/textillate/0.4.0/jquery.textillate.js"></script>
+    <script src="sim.js"></script>
+</body>
+
+</html>

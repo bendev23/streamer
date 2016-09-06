@@ -1,0 +1,13 @@
+{
+    "globals": {
+        "$": false,
+        "jQuery": false,
+        "localStorage": false,
+        "document": false,
+        "setInterval": false,
+        "clearInterval": false,
+        "location": false,
+        "setTimeout": false,
+        "window": false
+    }
+}
