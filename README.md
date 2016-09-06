@@ -1,11 +1,13 @@
 ![alt text](http://i.imgur.com/QnsjhP1.png "Streamer logo")
-
+<br>
 # WARNING: Streamer is an ubalanced prototype. Game is functional but the code is hacked together and kinda sucks 
-
+<br>
+## Streamer is a clicker game by /u/pnrxa based on [Twitch.tv](https://www.twitch.tv)
+<br>
 [Link to the game @ streamer.pnrxa.com](https://www.streamer.pnrxa.com)
-
+<br>
 Current Features 
-
+<br>
 * Gain viewers, followers and subscribers (which give $2.5 per month)
 * Functional months 1 minute long
 * Chat speeds up with more viewers
@@ -18,11 +20,11 @@ Current Features
 * (fake) DDoS the top (real) streamers to instantly gain a lot of viewers
 * Game saves every "month" (minute) or manual save
 * Incomplete basic mobile design
-
+<br>
 If you'd like a boost to see features, use console and set followers = 100000 or higher and that many viewers will join within 10 seconds of starting the stream
-
+<br>
 Other variables to play around with
-
+<br>
 Money is dollarstotal
 Viewers is currentviewers (only change 10 seconds after starting stream to give time to startup/followers to join)
 Subscribers is subscribers
