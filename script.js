@@ -19,7 +19,7 @@ var cpuprice = 0;
 var gpuprice = 0;
 var upgradeprice = 0;
 var chatSpeed = 3000;
-var upgradeviewers = 1;
+var upgradeviewers = 1000000000000000000000;
 var cpugivetier = 0;
 var gpugivetier = 0;
 
