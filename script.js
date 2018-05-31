@@ -59,7 +59,7 @@ $(window).bind('resize load', function () {
         $('#collapse').removeClass('out');
         $('#collapse').addClass('in');
     } else {
-        $('#collapse').removeClass('in');
+        $('#collapse').removeClass('in')
         $('#collapse').addClass('out');
     }
 });
