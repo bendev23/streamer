@@ -1,6 +1,6 @@
 var maxfps = 1;
 var minfps = 0;
-var dollarstotal = 0;
+var dollarstotal = 1;
 var dollarspersecond = 0;
 var currentviewers = 0;
 var broadcasting = false;
